@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Models.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'twitchDesktop.dbo.favorites' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="favorites">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="displayName" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="displayName" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="ModelsStoreContainer">
+    <EntitySet Name="favorites" EntityType="Self.favorites" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [favorites].[id] AS [id], 
+    [favorites].[displayName] AS [displayName]
+    FROM [dbo].[favorites] AS [favorites]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

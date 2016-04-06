@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "TwitchMVC";
+}
+
+@model Twitch_MVC.Models.streamViewModel
+
+<h2>Acitve Streams</h2>
+
+<p>This is going to be the page that will display all active streams..</p>
+
+<div>
+
+    <select name="streams" style="height:400px;" multiple>
+    
+    @for (int i = 0; i < 10; i++)
+    {
+        <option value="stream">stream</option>
+    }
+
+    </select>
+
+</div>
+
+<style type="text/css">
+    select 
+    {
+        width: 200px;
+        height: 1000px;
+    }
+</style>

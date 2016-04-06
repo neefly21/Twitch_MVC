@@ -6,24 +6,21 @@ using System.Web.Mvc;
 
 namespace Twitch_MVC.Controllers
 {
-    public class HomeController : Controller
+    public class MainController : Controller
     {
+
+        static String test = "test";
+
         public ActionResult Index()
         {
-            return View();
-        }
+            
 
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
 
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult activeStreams()
         {
-            ViewBag.Message = "Your contact page.";
-
             return View();
         }
     }
